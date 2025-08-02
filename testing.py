@@ -70,7 +70,10 @@ Context:
 
 # --- Streamlit App ---
 st.set_page_config(page_title="Document Q&A", page_icon="📚", layout="wide")
-st.title("📚 Document Q&A System")
+st.image("misc/bmrn.jpeg", width=300)
+st.title("Index Q&A - System:")
+
+
 
 # Sidebar: DB status
 with st.sidebar:
