@@ -141,7 +141,8 @@ If you encounter issues:
 
 
 
-
+#### Output from `pipeplie.py`:
+```
 2025-08-06 21:30:52,856 - docling.document_converter - INFO - Finished converting document 2025.03.26.645611v1.full.pdf in 87.48 sec.
 2025-08-06 21:30:54,391 - doc_pipeline - INFO - Converted 7 documents.
 2025-08-06 21:30:54,939 - doc_pipeline - INFO - Chunked document into 30 chunks.
@@ -170,3 +171,4 @@ If you encounter issues:
 176  Fig. 2. Immunofluorescence labeling of human p...  [-0.0022837063, 0.016030857, 0.016017038, 0.02...  {'filename': '2025.03.26.645611v1.full.pdf', '...
 
 [177 rows x 3 columns]
+```
