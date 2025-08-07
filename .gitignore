@@ -1,0 +1,10 @@
+.env
+bin
+
+# Virtual environments
+.venv
+.DS_Store
+.docling.db.lock
+.env
+.python-version
+scratch
