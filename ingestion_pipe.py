@@ -34,7 +34,17 @@ def prepare_chunks(chunk_list):
             "text": chunk.text,
             "metadata": {
                 "filename": chunk.meta.origin.filename,
-                "page_numbers": sorted({prov.page_no for item in chunk.meta.doc_items for prov in item.prov}) or None,
+                "page_numbers": [
+                page_no
+                for page_no in sorted(
+                    set(
+                        prov.page_no
+                        for item in chunk.meta.doc_items
+                        for prov in item.prov
+                    )
+                )
+            ]
+            or None,
                 "title": chunk.meta.headings[0] if chunk.meta.headings else None,
             },
         }
@@ -47,4 +57,5 @@ def embed_and_store(processed_chunks):
     table = db.create_table(TABLE_NAME, schema=Chunks, mode="overwrite")
     table.add(processed_chunks)
     log.info(f"Stored {table.count_rows()} rows.")
+    log.info(table.to_pandas())
     return table

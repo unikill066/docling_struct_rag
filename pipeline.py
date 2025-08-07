@@ -1,3 +1,8 @@
+"""
+This script is used to ingest a set of PDF, DOCX, and TXT, HTML files and store the embeddings in a LanceDB database.
+"""
+
+# imports
 from ingestion_pipe import extract_documents, chunk_documents, prepare_chunks, embed_and_store
 
 import os
